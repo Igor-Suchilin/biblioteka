@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Список книг
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+<h1>Список книг</h1>
+    {% if books|length > 0 %}
+        {% for book in books %}
+        <div class="alert">
+            <h2>{{ book.title }}</h2>
+            <p>{{ book.writer }}</p>
+            <p><b>{{ book.date.date() }}</b></p>
+            <a href="/all-books/{{ book.id }}" class="btn btn-success">К книге</a>
+        </div>
+        {% endfor %}
+    {% else %}
+    <h1>Книги закончились(((</h1>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Добавление книг
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Добавление книг</h1>
+    <form method="post">
+        <input type="text" name="title" id="title" class="form-control" placeholder="Название книги"><br>
+        <textarea name="writer" id="writer" class="form-control" placeholder="Автор книги"></textarea><br>
+        <textarea name="text" id="text" class="form-control" placeholder="Отрывок текста"></textarea><br>
+        <input type="submit" class="btn btn-success" value="Отправить"><br>
+    </form>
+</div>
+
+{% endblock %}
